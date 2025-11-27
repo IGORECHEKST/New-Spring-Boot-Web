@@ -1,10 +1,12 @@
 package com.example.project.config;
 
-import org.mapstruct.ReportingPolicy;
+import org.mapstruct.InjectionStrategy;
+import org.mapstruct.NullValueCheckStrategy;
 
-@org.mapstruct.MapperConfig (
+@org.mapstruct.MapperConfig(
         componentModel = "spring",
-        unmappedTargetPolicy = ReportingPolicy.IGNORE
+        injectionStrategy = InjectionStrategy.CONSTRUCTOR,
+        nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS
 )
 public interface MapperConfig {
 }
