@@ -8,6 +8,9 @@ import jakarta.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
+@Getter
+@Setter
+@table(name = "books")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
